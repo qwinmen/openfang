@@ -20,7 +20,9 @@
 #include <sys/stat.h>
 #endif
 #ifdef HAVE_SYS_MKDEV_H
-#include <sys/mkdev.h>
+#include <sys/sysmacros.h>
+#elif HAVE_SYS_SYSMACROS_H
+#include <sys/sysmacros.h>
 #endif
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
