@@ -29,7 +29,9 @@
 #include <errno.h>
 #endif
 #if HAVE_SYS_MKDEV_H
-#include <sys/mkdev.h>
+#include <sys/sysmacros.h>
+#elif HAVE_SYS_SYSMACROS_H
+#include <sys/sysmacros.h>
 #endif
 
 #include "ext2_fs.h"
